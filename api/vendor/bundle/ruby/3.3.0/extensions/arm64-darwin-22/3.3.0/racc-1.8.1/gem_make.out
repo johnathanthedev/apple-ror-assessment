@@ -1,0 +1,18 @@
+current directory: /Users/johnathanthedev/code/projects/apple-ror-assessment/api/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/johnathanthedev/.rbenv/versions/3.3.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/johnathanthedev/code/projects/apple-ror-assessment/api/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240911-96053-l9vaxw sitelibdir\=./.gem.20240911-96053-l9vaxw clean
+
+current directory: /Users/johnathanthedev/code/projects/apple-ror-assessment/api/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240911-96053-l9vaxw sitelibdir\=./.gem.20240911-96053-l9vaxw
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/johnathanthedev/code/projects/apple-ror-assessment/api/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240911-96053-l9vaxw sitelibdir\=./.gem.20240911-96053-l9vaxw install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20240911-96053-l9vaxw/racc
+
+current directory: /Users/johnathanthedev/code/projects/apple-ror-assessment/api/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240911-96053-l9vaxw sitelibdir\=./.gem.20240911-96053-l9vaxw clean

@@ -1,0 +1,3 @@
+--use-system-libraries
+--with-xml2-config=/opt/homebrew/opt/libxml2/bin/xml2-config
+--with-xslt-config=/opt/homebrew/opt/libxslt/bin/xslt-config
