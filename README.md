@@ -4,6 +4,14 @@
 
 - Docker
 
+**You will need an API Key to use the third-party weather API**
+
+`https://home.openweathermap.org/api_keys`
+
+**You will also need to a free subscription to get the weather data**
+
+`https://openweathermap.org/price`
+
 ## Getting Started
 
 You will need to create a `.env` file for both the `/api` and `/frontend` directories. Please reference the sample .env files inside of `/documents`.
