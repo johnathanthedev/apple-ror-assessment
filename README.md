@@ -8,7 +8,12 @@ You will need to create a `.env` file for both the `/api` and `/frontend` direct
 
 ## Getting Started
 
-You will need to build and start the docker services.
+Create the .env files.
+
+1. Inside of the `/frontend` directory copy and paste the contents of `/documents/.example.frontend.env` and paste them into the new `.env` file.
+2. Inside of the `/api` directory copy and paste the contents of `/documents/.example.api.env` and paste them into the new `.env` file.
+
+Build and start the docker services.
 
 1. Build services
 ```bash
