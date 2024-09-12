@@ -2,13 +2,11 @@
 
 ## Pre-requisites
 
-You will need to create a `.env` file for both the `/api` and `/frontend` directories. Please reference the sample .env files inside of `/documents`.
-
 - Docker
 
 ## Getting Started
 
-Create the .env files.
+You will need to create a `.env` file for both the `/api` and `/frontend` directories. Please reference the sample .env files inside of `/documents`.
 
 1. Inside of the `/frontend` directory copy and paste the contents of `/documents/.example.frontend.env` and paste them into the new `.env` file.
 2. Inside of the `/api` directory copy and paste the contents of `/documents/.example.api.env` and paste them into the new `.env` file.
