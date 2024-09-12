@@ -2,7 +2,7 @@
 
 ## Pre-requisites
 
-In both the `/api` and `/frontend` directories please reference the .env files inside of `/documents`.
+You will need to create a `.env` file for both the `/api` and `/frontend` directories. Please reference the sample .env files inside of `/documents`.
 
 - Docker
 
