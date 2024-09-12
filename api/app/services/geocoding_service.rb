@@ -7,9 +7,9 @@ class GeocodingService
   API_KEY = ENV['OPEN_WEATHER_API_KEY']
 
   def self.get_coordinates_by_city(address)
-    url = "#{CITY_GEOCODING_API_URL}?q=#{city},#{state}&limit=1&appid=#{API_KEY}"
     city = address[:city]
     state = address[:state]
+    url = "#{CITY_GEOCODING_API_URL}?q=#{city},#{state}&limit=1&appid=#{API_KEY}"
 
     response = Net::HTTP.get(URI(url))
     data = JSON.parse(response)
