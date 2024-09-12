@@ -42,3 +42,23 @@ Head to `http://localhost:4000` on your machine to access the local frontend.
 The API lives in `http://localhost:3000`.
 
 You can make networks requests to the API from the frontend or through an API testing tool like Postman.
+
+## Objects
+
+`Forecast`
+
+Used as the core representation of the forecast data.
+
+It contains the following fields
+
+- current
+- daily
+
+The `current` field is a jsonb column used to hold json data of the current weather forecast with fields like
+
+- temp
+- weather
+
+The `weather` field holds the type/kind of weather like cloudy or sunny.
+
+A similar pattern is used for the `daily` column. Except it provides high/low temperature data.
