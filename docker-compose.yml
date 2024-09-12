@@ -1,0 +1,65 @@
+version: "3.9"
+services:
+  db:
+    container_name: db
+    image: postgres:latest
+    volumes:
+      - api-pg-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: johnathanthedev
+      POSTGRES_DB: enterprise_forecast_development
+      PG_DATA: /var/lib/postgresql/data
+    networks:
+      - enterprise-forecast
+    restart: no
+
+  api:
+    container_name: api
+    build: ./api
+    command: bash -c "rm -f /api/tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    env_file:
+      - ./api/.env
+    volumes:
+      - ./api:/api
+    networks:
+      - enterprise-forecast
+    restart: no
+
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - 6379:6379
+    volumes:
+      - ./api:/api
+    networks:
+      - enterprise-forecast
+    # expose:
+    #   - "6379"
+
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - 4000:4000
+    env_file:
+      - ./frontend/.env
+    volumes:
+      - ./frontend:/frontend
+    networks:
+      - enterprise-forecast
+
+networks:
+  enterprise-forecast:
+    name: enterprise-forecast
+    driver: bridge
+
+volumes:
+  api:
+  api-pg-data:
+  frontend:
