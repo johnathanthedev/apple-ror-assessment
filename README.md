@@ -1,5 +1,11 @@
 # Enterprise Forecast App
 
+You might need to enable caching during dev. In the `/api` dir run
+
+```bash
+rails dev:cache
+```
+
 ## Pre-requisites
 
 - Docker
@@ -29,6 +35,11 @@ docker-compose build
 2. Run services in bg
 ```bash
 docker-compose up -d
+```
+
+Run unit tests by running the following command from inside the `/api` directory
+```bash
+bundle exec rspec
 ```
 
 ## Usage
