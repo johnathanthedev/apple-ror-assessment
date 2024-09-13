@@ -2,7 +2,7 @@
 
 import CityStateForm from "@/app/components/city-state-form/Index";
 import PostalCodeForm from "@/app/components/postal-code-form/Index";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./page.module.css";
 import { getForecast } from "./services/forecast.service";
 import { ForecastData } from "./types/forecast";
@@ -39,10 +39,6 @@ export default function Home() {
 
     setForecastData(res)
   }
-
-  useEffect(() => {
-    console.log(forecastData)
-  }, [forecastData])
 
   return (
     <div className={styles.container}>
