@@ -14,7 +14,7 @@ rails dev:cache
 
 `https://home.openweathermap.org/api_keys`
 
-**You will also need to a free subscription to get the weather data**
+**You will also need a free subscription to get the weather data**
 
 `https://openweathermap.org/price`
 
