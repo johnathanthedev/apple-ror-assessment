@@ -6,11 +6,11 @@ class Forecast < ApplicationRecord
   def self.for_coordinates(lat, lon)
     cache_key = "forecast_#{lat}_#{lon}"
 
+    cache_hit = Rails.cache.exist?(cache_key)
+
     forecast_data = Rails.cache.fetch(cache_key, expires_in: 30.minutes) do
       fetch_forecast_by_coordinates(lat, lon)
     end
-
-    cache_hit = Rails.cache.exist?(cache_key)
 
     if cache_hit
       { forecast: forecast_data, cached: true }

@@ -14,11 +14,17 @@ class Api::V1::ForecastsController < ApplicationController
 
       data = GeocodingService.get_coordinates_by_city(address)
     end
-    
-    lat = data[:coordinates][:lat]
-    lon = data[:coordinates][:lon]
 
-    forecast = Forecast.for_coordinates(lat, lon)
+    forecast = {
+      forecast: nil
+    }
+
+    if data[:coordinates]
+      lat = data[:coordinates][:lat]
+      lon = data[:coordinates][:lon]
+
+      forecast = Forecast.for_coordinates(lat, lon)
+    end
 
     render json: forecast, status: :ok
   end
