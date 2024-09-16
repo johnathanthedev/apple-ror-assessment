@@ -1,4 +1,8 @@
 class Api::V1::ForecastsController < ApplicationController
+  # When hitting endpoint the provided payload will need to include city, state and postal code.
+  # postal code is optional and will only be accessed if field is not empty string.
+  # postal code lookup is prioritized.
+  # If want to lookup by city/state then postal code needs to be empty string: ""
   def get_forecast
     postal_code = forecast_params[:postal_code]
 
