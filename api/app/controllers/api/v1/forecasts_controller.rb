@@ -2,7 +2,9 @@ class Api::V1::ForecastsController < ApplicationController
   def get_forecast
     postal_code = forecast_params[:postal_code]
 
-    if postal_code
+    # Checks if postal_code is not empty otherwise defaults to
+    # city based coords lookup
+    if !postal_code.empty?
       data = GeocodingService.get_coordinates_by_postal_code(postal_code)
     else
       city = forecast_params[:city]
